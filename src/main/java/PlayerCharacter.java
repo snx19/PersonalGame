@@ -5,6 +5,14 @@ public class PlayerCharacter implements Player {
     public int strength;
     public int speed;
 
+    PlayerCharacter(String name) {
+        this.name = name;
+    }
+    // takes damage
+    public void takeDamage(int damage) {
+        this.health -= damage;
+    }
+
     // sets health
     public void setHealth(int health) {
         this.health = health;
@@ -18,6 +26,10 @@ public class PlayerCharacter implements Player {
         this.speed = speed;
     }
 
+    // gets name
+    public String getName() {
+        return name;
+    }
     // gets health
     public int getHealth() {
         return health;
@@ -30,8 +42,5 @@ public class PlayerCharacter implements Player {
     public int getSpeed() {
         return speed;
     }
-
-
-
 
 }
